@@ -1,7 +1,8 @@
 # Welcome back [AstroEndfield](https://astro.endfield.tech/)
 
-  [English](./README.en.md)
-| [简体中文](./README.md)
+  [简体中文](./README.md)
+| [日本語（TODO）](./README.ja.md)
+| [English (TODO)](./README.en.md)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)

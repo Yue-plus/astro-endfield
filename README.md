@@ -1,7 +1,8 @@
 # 欢迎回归 [AstroEndfield](https://astro.endfield.tech/)
 
-  [English (TODO)](./README.en.md)
-| [简体中文](./README.md)
+  [简体中文](./README.md)
+| [日本語（TODO）](./README.ja.md)
+| [English (TODO)](./README.en.md)
 
 ## 参考链接
 
