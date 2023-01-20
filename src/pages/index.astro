@@ -5,7 +5,7 @@ import Card from '../components/Card.astro';
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1>Welcome back <span class="text-gradient">AstroEndfield</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -36,10 +36,14 @@ import Card from '../components/Card.astro';
 </Layout>
 
 <style>
+	html {
+		color: white;
+		background-color: black;
+	}
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 80ch;
 	}
 	h1 {
 		font-size: 3rem;
@@ -57,7 +61,7 @@ import Card from '../components/Card.astro';
 		line-height: 1.6;
 		margin: 1rem 0;
 		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
+		background-color: gray;
 		padding: 1rem;
 		border-radius: 0.4rem;
 	}
