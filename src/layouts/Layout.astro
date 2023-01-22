@@ -1,13 +1,18 @@
 ---
+import config from "../../endfield.config";
+import Colors from "../components/Colors";
+
 export interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+const endfieldColor = Colors.primaryEndfield;
+const arknightsColor = Colors.primaryArknights;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={config.language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -19,19 +24,25 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-<style is:global>
+
+<style is:global define:vars={{ endfieldColor, arknightsColor }}>
   :root {
-    --accent: 124, 58, 237;
+    --accent: var(--endfieldColor);
     --accent-gradient: linear-gradient(
       45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
+      var(--arknightsColor),
+      var(--endfieldColor) 30%,
       white 60%
     );
   }
   html {
     font-family: system-ui, sans-serif;
     background-color: #f6f6f6;
+    background-image: url("/assets/img/base_bg.jpg");
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
