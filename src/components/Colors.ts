@@ -1,3 +1,1 @@
-export default class Colors {
-    
-}
+export default class Colors {}

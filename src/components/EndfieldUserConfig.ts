@@ -1,55 +1,62 @@
 export type Backround = {
-    color?: string
-    image?: URL
-    dynamic?: 'disable' | 'default' | 'dust' | 'firefly' | 'overcast' | 'sunshine'
-}
+  color?: string;
+  image?: URL;
+  dynamic?:
+    | "disable"
+    | "default"
+    | "dust"
+    | "firefly"
+    | "overcast"
+    | "sunshine";
+};
 
 export type NavigationBarItem = {
-    icon: string
-    text: string
-    link: URL
-    target: '_blank' | '_self'
-}
+  icon: string;
+  text: string;
+  link: URL;
+  target: "_blank" | "_self";
+};
 
 export type SideBar = {
-    // TODO
-}
+  // TODO
+};
 
 export type Valine = {
-    appId: string
-    appKey: string
-    serverUrl?: string
-}
+  appId: string;
+  appKey: string;
+  serverUrl?: string;
+};
 
 export type Gitalk = {
-    clientId: string
-    clientSecret: string
-    repo: string
-    owner: string
-    admin: string[]
-    id: string
-}
+  clientId: string;
+  clientSecret: string;
+  repo: string;
+  owner: string;
+  admin: string[];
+  id: string;
+};
 
 export type Waline = {
-    serverUrl: string
-}
+  serverUrl: string;
+};
 
 export type EndfieldUserConfig = {
-    language?: string
-    background?: Backround
-    commentSystem?: Valine | Gitalk | Waline
-    navigationBar?: NavigationBarItem[]
-    aside?: SideBar
-}
+  language?: string;
+  background?: Backround;
+  commentSystem?: Valine | Gitalk | Waline;
+  navigationBar?: NavigationBarItem[];
+  aside?: SideBar;
+};
 
-export function defineEndfieldConfig(config: EndfieldUserConfig): EndfieldUserConfig {
-    return {
-        language: config.language ?? "zh",
-        background: {
-            color: config.background?.color ?? 'black',
-            image: new URL("/"),
-            dynamic: 'disable',
-        }
-        
-    }
+export function defineEndfieldConfig(
+  config: EndfieldUserConfig
+): EndfieldUserConfig {
+  return {
+    language: config.language ?? "zh",
+    background: {
+      color: config.background?.color ?? "black",
+      image: new URL("/"),
+      dynamic: "disable",
+    },
+  };
 }

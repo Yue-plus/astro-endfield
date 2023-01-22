@@ -1,6 +1,6 @@
 # Welcome back [AstroEndfield](https://astro.endfield.tech/)
 
-  [简体中文](./README.md)
+[简体中文](./README.md)
 | [日本語（TODO）](./README.ja.md)
 | [English (TODO)](./README.en.md)
 
@@ -10,7 +10,6 @@
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
 ![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
-
 
 ## 🚀 Project Structure
 
