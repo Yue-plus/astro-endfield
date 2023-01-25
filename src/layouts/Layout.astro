@@ -1,6 +1,7 @@
 ---
 import config from "../../endfield.config";
 import Colors from "../components/Colors";
+import Header from "./Header/Header";
 
 export interface Props {
   title: string;
@@ -20,7 +21,8 @@ const arknightsColor = Colors.primaryArknights;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body style="margin: 0">
+    <Header client:load />
     <slot />
   </body>
 </html>
