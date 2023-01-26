@@ -1,4 +1,5 @@
 import Colors from "./Colors";
+import type { Valine, Gitalk, Waline } from "./types/CommentSystem";
 
 export type Background = {
   color?: string;
@@ -18,15 +19,15 @@ export type Theme = {
   background: string;
 };
 
-export type NavigationBar = {
+export type NavBar = {
   logo: string;
-  items: NavigationBarItem[];
+  items: NavBarItem[];
 };
 
-export type NavigationBarItem = {
-  icon: string;
-  text: string;
-  link: URL;
+export type NavBarItem = {
+  icon?: string;
+  text?: string;
+  link?: string;
   target: "_blank" | "_self";
 };
 
@@ -34,23 +35,8 @@ export type SideBar = {
   // TODO
 };
 
-export type Valine = {
-  appId: string;
-  appKey: string;
-  serverUrl?: string;
-};
-
-export type Gitalk = {
-  clientId: string;
-  clientSecret: string;
-  repo: string;
-  owner: string;
-  admin: string[];
-  id: string;
-};
-
-export type Waline = {
-  serverUrl: string;
+export type Footer = {
+  icp?: string;
 };
 
 export type EndfieldUserConfig = {
@@ -59,8 +45,9 @@ export type EndfieldUserConfig = {
   darkTheme?: Theme;
   lightTheme?: Theme;
   commentSystem?: Valine | Gitalk | Waline;
-  navigationBar?: NavigationBar;
+  navBar?: NavBar;
   aside?: SideBar;
+  footer?: Footer;
 };
 
 export function defineEndfieldConfig(
@@ -82,6 +69,16 @@ export function defineEndfieldConfig(
       primary: Colors.primaryEndfield,
       foreground: "black",
       background: "white",
+    },
+    navBar: {
+      logo: "",
+      items: [
+        { text: "Docs", link: "docs/", target: "_blank" },
+        { text: "blog", link: "blog/", target: "_blank" },
+      ],
+    },
+    footer: {
+      icp: config.footer?.icp,
     },
   };
 }
