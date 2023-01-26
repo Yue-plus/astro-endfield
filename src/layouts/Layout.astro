@@ -1,6 +1,7 @@
 ---
 import config from "../../endfield.config";
 import Colors from "../components/Colors";
+import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 
 export interface Props {
@@ -22,8 +23,9 @@ const arknightsColor = Colors.primaryArknights;
     <title>{title}</title>
   </head>
   <body style="margin: 0">
-    <Header client:load />
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 

@@ -1,6 +1,6 @@
 import Colors from "./Colors";
 
-export type Backround = {
+export type Background = {
   color?: string;
   image?: string;
   dynamic?:
@@ -16,6 +16,11 @@ export type Theme = {
   primary: string;
   foreground: string;
   background: string;
+};
+
+export type NavigationBar = {
+  logo: string;
+  items: NavigationBarItem[];
 };
 
 export type NavigationBarItem = {
@@ -50,11 +55,11 @@ export type Waline = {
 
 export type EndfieldUserConfig = {
   language?: string;
-  background?: Backround;
+  background?: Background;
   darkTheme?: Theme;
   lightTheme?: Theme;
   commentSystem?: Valine | Gitalk | Waline;
-  navigationBar?: NavigationBarItem[];
+  navigationBar?: NavigationBar;
   aside?: SideBar;
 };
 
@@ -65,7 +70,7 @@ export function defineEndfieldConfig(
     language: config.language ?? "zh",
     background: {
       color: config.background?.color ?? "black",
-      image: "/assets/img/base_bg.jpg",
+      image: config.background?.image ?? "/assets/img/base_bg.jpg",
       dynamic: "disable",
     },
     darkTheme: {
