@@ -19,7 +19,7 @@
 - [入门指南 🚀 Astro 文档](https://docs.astro.build/zh-cn/getting-started/)
 - [TypeScript: JavaScript With Syntax For Types.](https://www.typescriptlang.org/zh/)
 - [React 官方中文文档 – 用于构建用户界面的 JavaScript 库](https://zh-hans.reactjs.org/)
-- [Tailwind CSS 中文文档 - 无需离开您的HTML，即可快速建立现代网站。](https://www.tailwindcss.cn/)
+- [Tailwind CSS 中文文档 - 无需离开您的 HTML，即可快速建立现代网站。](https://www.tailwindcss.cn/)
 - [《明日方舟：终末地》官方网站-Arknights: Endfield](https://endfield.hypergryph.com/)
 - [Arknights: Endfield - Over the Frontier | Into the Front](https://endfield.hypergryph.global/)
 - [《明日方舟：终末地》概念 CG](https://www.bilibili.com/video/BV1iF411s7vc/)
