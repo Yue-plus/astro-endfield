@@ -1,5 +1,5 @@
 ---
-title: 'Hello World !'
+title: "Hello World !"
 date: 2020-04-15 21:54:02
 tags: code
 category: Example
@@ -10,11 +10,13 @@ category: Example
 ```js
 console.log("Hello World");
 ```
+
 这儿有一些代码示例~
 
 <!-- more -->
 
 # Apache
+
 ```apache
 # rewrite`s rules for wordpress pretty url
 LoadModule rewrite_module  modules/mod_rewrite.so
@@ -38,6 +40,7 @@ Allow from All
 ```
 
 # Bash
+
 ```bash
 #!/bin/bash
 
@@ -59,6 +62,7 @@ echo '"quoted"' | tr -d \" > text.txt
 ```
 
 # CoffeeScript
+
 ```coffeescript
 grade = (student, period=(if b? then 7 else 6)) ->
   if student.excellentWork
@@ -76,6 +80,7 @@ class Animal extends Being
 ```
 
 # C++
+
 ```c++
 #include <iostream>
 
@@ -94,6 +99,7 @@ int main(int argc, char *argv[]) {
 ```
 
 # C#
+
 ```cs
 using System.IO.Compression;
 
@@ -114,26 +120,31 @@ namespace MyApplication
 ```
 
 # CSS
+
 ```css
 @font-face {
-  font-family: Chunkfive; src: url('Chunkfive.otf');
+  font-family: Chunkfive;
+  src: url("Chunkfive.otf");
 }
 
-body, .usertext {
-  color: #F0F0F0; background: #600;
+body,
+.usertext {
+  color: #f0f0f0;
+  background: #600;
   font-family: Chunkfive, sans;
   --heading-1: 30px/32px Helvetica, sans-serif;
 }
 
 @import url(print.css);
 @media print {
-  a[href^=http]::after {
-    content: attr(href)
+  a[href^="http"]::after {
+    content: attr(href);
   }
 }
 ```
 
 # diff
+
 ```diff
 Index: languages/ini.js
 ===================================================================
