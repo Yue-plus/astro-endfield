@@ -1,3 +1,5 @@
 # Ignore artifacts:
 build
 coverage
+/src/pages/blog
+/src/pages/docs
