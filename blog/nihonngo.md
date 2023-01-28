@@ -2,7 +2,7 @@
 title: "ロドス・アイランド"
 date: 2020-04-19 11:30:05
 tags:
-layout: ../../layouts/Layout.astro
+layout: ./src/layouts/Layout.astro
 ---
 
 表向きは製薬会社であり、正式名称は「ロドス・アイランド製薬」という。

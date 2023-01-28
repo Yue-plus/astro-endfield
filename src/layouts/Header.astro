@@ -1,0 +1,29 @@
+---
+import endfieldConfig from "../../endfield.config";
+import type { NavBarItem, Theme } from "../components/EndfieldUserConfig";
+
+const navBarItems: NavBarItem[] = endfieldConfig.navBar?.items ?? [];
+const site = Astro.site ?? "/";
+---
+
+<header class="h-16 bg-gray">
+  <a class="h-16" href={site}>
+    <img
+      class="h-16 p-3 inline-block"
+      src="/assets/img/astro-endfield-logo.svg"
+      alt="Endfield-Astro"
+    />
+  </a>
+  <ul class="inline-block">
+    {
+      navBarItems.map((item) => (
+        <li class="inline-block">
+          <a class="h16 p-4 inline-block" href={site + (item.link ?? "/")}>
+            {item.icon}
+            {item.text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</header>

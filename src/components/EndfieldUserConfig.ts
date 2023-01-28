@@ -20,7 +20,8 @@ export type Theme = {
 };
 
 export type NavBar = {
-  logo: string;
+  logo?: string;
+  title?: string;
   items: NavBarItem[];
 };
 
@@ -71,7 +72,8 @@ export function defineEndfieldConfig(
       background: "white",
     },
     navBar: {
-      logo: "",
+      logo: config.navBar?.logo ?? "",
+      title: config.navBar?.title ?? "",
       items: [
         { text: "Docs", link: "docs/", target: "_blank" },
         { text: "blog", link: "blog/", target: "_blank" },
