@@ -1,92 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+
+const gitHub = "https://github.com/Yue-plus/astro-endfield";
+const text = `Pull content from anywhere and serve it fast with Astro's next-gen island architecture.`;
 ---
 
 <Layout title="Welcome back AstroEndfield.">
-  <main>
-    <h1>Welcome back <span class="text-gradient">AstroEndfield</span></h1>
-    <p class="instructions">
-      The project is under development!
-      <a target="_blank" href="https://github.com/Yue-plus/astro-endfield"
-        >↗GitHub</a
+  <div class="h-4 p-3 leading-4">
+    <div class="h-4 w-4 bg-white inline-block align-middle" style="color: #">
+    </div>
+    {"Welcome back AstroEndfield.".toUpperCase()}
+  </div>
+  <main class="m-auto p-1.5 max-w-2xl">
+    <Card title="info">
+      <div
+        class="h-12 w-12 inline-block mr-3"
+        style="background-color: #fdfd1f;"
       >
-    </p>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+      </div>
+      <h1 class="text-5xl inline-block">Build faster websites.</h1>
+      <div class="h-64 text-2xl">
+        <img
+          class="h-64 w-64 inline-block float-left pr-3"
+          src="/assets/img/endfield-industries.svg"
+          alt="Endfield Industries"
+        />
+        {text}
+      </div>
+      <div class="p-3 text-center">
+        <a class="p-3 mr-3 bg-endfield" href="/docs/start">Get Start</a>
+        <a target="_blank" class="p-3 bg-arknights text-white" href={gitHub}>
+          ↗GitHub
+        </a>
+      </div>
+    </Card>
   </main>
 </Layout>
-
-<style>
-  html {
-    color: white;
-    background-color: black;
-  }
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 80ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: gray;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
