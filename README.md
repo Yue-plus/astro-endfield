@@ -12,6 +12,7 @@
 
 [Bender Font Family](https://www.1001fonts.com/bender-font.html)
 | [Orbitron](https://fonts.google.com/specimen/Orbitron)
+| [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 | [思源黑体](https://github.com/adobe-fonts/source-han-sans/blob/master/README-CN.md)
 
 ## 参考链接
@@ -29,3 +30,12 @@
 [hexo-theme-arknights](https://github.com/Yue-plus/hexo-theme-arknights)
 | [arknights_icons](https://github.com/Yue-plus/arknights_icons)
 | [endfield_icons](https://github.com/Yue-plus/endfield_icons)
+
+
+## TODO
+
+- 添加字体
+- 修改光标
+- 修改滚动条
+- 响应式
+- And More...

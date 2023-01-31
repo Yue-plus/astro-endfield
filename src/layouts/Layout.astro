@@ -1,5 +1,6 @@
 ---
 import config from "../../endfield.config";
+import Fonts from "./Fonts.astro";
 import Colors from "../components/Colors";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
@@ -21,10 +22,11 @@ const arknightsColor = Colors.primaryArknights;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <Fonts />
   </head>
   <body
     class="h-full m-0 bg-no-repeat bg-fixed bg-cover bg-center flex flex-col text-white"
-    style="background-image: url(/assets/img/base_bg.jpg);"
+    style="background-image: url(/assets/img/base_bg.jpg); font-family: 'JetBrainsMono';"
   >
     <Header />
     <slot class="flex-grow" />
