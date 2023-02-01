@@ -15,7 +15,10 @@ const arknightsColor = Colors.primaryArknights;
 ---
 
 <!DOCTYPE html>
-<html lang={config.language} class="h-full">
+<html
+  lang={config.language}
+  class="h-full text-fg-lightest bg-bg-lightest dark:text-fg-darkest dark:bg-bg-lightest"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -25,8 +28,8 @@ const arknightsColor = Colors.primaryArknights;
     <Fonts />
   </head>
   <body
-    class="h-full m-0 bg-no-repeat bg-fixed bg-cover bg-center flex flex-col text-white"
-    style="background-image: url(/assets/img/base_bg.jpg); font-family: 'JetBrains Mono';"
+    class="h-full m-0 bg-no-repeat bg-fixed bg-cover bg-center flex flex-col dark:text-white"
+    style="background-image: url(/assets/img/base_bg_light.jpg); font-family: 'JetBrains Mono';"
   >
     <Header />
     <slot class="flex-grow" />

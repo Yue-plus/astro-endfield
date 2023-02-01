@@ -6,14 +6,11 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<div class="m-3" style="box-shadow: 0 1rem .5rem #000000CC">
-  <div
-    class="pl-3 pr-3"
-    style={{ color: "#2f2f2f", backgroundColor: "#f5f5f5" }}
-  >
+<div class="m-3 shadow dark:shadow-dark">
+  <div class="pl-3 pr-3 text-fg-lighter bg-bg-lighter dark:text-fg-darker dark:bg-bg-darker">
     {title}
   </div>
-  <div class="p-3" style={{ color: "#343434", backgroundColor: "#e6e6e6" }}>
+  <div class="p-3 text-fg-light bg-bg-light dark:text-fg-dark dark:bg-bg-dark">
     <slot />
   </div>
 </div>
