@@ -1,7 +1,6 @@
 ---
 import config from "../../endfield.config";
 import Fonts from "./Fonts.astro";
-import Colors from "../components/Colors";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
 
@@ -10,8 +9,6 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-const endfieldColor = Colors.primaryEndfield;
-const arknightsColor = Colors.primaryArknights;
 ---
 
 <!DOCTYPE html>
@@ -28,8 +25,8 @@ const arknightsColor = Colors.primaryArknights;
     <Fonts />
   </head>
   <body
-    class="h-full m-0 bg-no-repeat bg-fixed bg-cover bg-center flex flex-col dark:text-white"
-    style="background-image: url(/assets/img/base_bg_light.jpg); font-family: 'JetBrains Mono';"
+    class="dark h-full m-0 bg-no-repeat bg-fixed bg-cover bg-center flex flex-col"
+    style="background-image: url(/assets/img/base_bg.jpg); font-family: 'JetBrains Mono';"
   >
     <Header />
     <slot class="flex-grow" />
