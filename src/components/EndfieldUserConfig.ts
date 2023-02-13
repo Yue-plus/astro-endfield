@@ -1,3 +1,4 @@
+import { atom } from "nanostores";
 import Colors from "./Colors";
 import type { Valine, Gitalk, Waline } from "./types/CommentSystem";
 
@@ -76,7 +77,7 @@ export function defineEndfieldConfig(
       title: config.navBar?.title ?? "",
       items: [
         { text: "Docs", link: "docs/", target: "_blank" },
-        { text: "blog", link: "blog/", target: "_blank" },
+        { text: "Blog", link: "blog/", target: "_blank" },
       ],
     },
     footer: {
@@ -84,3 +85,6 @@ export function defineEndfieldConfig(
     },
   };
 }
+
+export const isDarkMode = atom(true);
+

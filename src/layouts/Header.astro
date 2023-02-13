@@ -1,6 +1,7 @@
 ---
 import endfieldConfig from "../../endfield.config";
 import type { NavBarItem, Theme } from "../components/EndfieldUserConfig";
+import ThemeSwitch from "@components/ThemeSwitch";
 
 const navBarItems: NavBarItem[] = endfieldConfig.navBar?.items ?? [];
 const site = Astro.site ?? "/";
@@ -26,4 +27,5 @@ const site = Astro.site ?? "/";
       ))
     }
   </ul>
+  <ThemeSwitch client:only />
 </header>
