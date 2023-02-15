@@ -12,10 +12,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html
-  lang={config.language}
-  class="h-full text-fg-lightest bg-bg-lightest dark:text-fg-darkest dark:bg-bg-darkest"
->
+<html lang={config.language} class="h-full dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -25,7 +22,7 @@ const { title } = Astro.props;
     <Fonts />
   </head>
   <body
-    class="dark h-full m-0 bg-no-repeat bg-fixed bg-cover bg-center flex flex-col"
+    class="h-full m-0 bg-no-repeat bg-fixed bg-cover bg-center flex flex-col text-fg-lightest bg-bg-lightest dark:text-fg-darkest dark:bg-bg-darkest"
     style="background-image: url(/assets/img/base_bg.jpg); font-family: 'JetBrains Mono';"
   >
     <Header />

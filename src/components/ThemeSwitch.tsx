@@ -14,23 +14,24 @@ export default function ThemeSwitch() {
                      viewBox="0 0 20 20" fill="currentColor">
         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
     </svg>
+    
+    const pcsDark = window.matchMedia("(prefers-color-scheme:dark)")
+    const [darkTheme, setDarkTheme] = useState(pcsDark.matches)
 
-    const pcsDark = window.matchMedia("prefers-color-scheme:dark")
-    const [theme, setTheme] = useState(pcsDark.matches)
-
-    pcsDark.addEventListener("change", (e) => {
-        setTheme(e.matches)
+    pcsDark.addEventListener('change', (e) => {
+        setDarkTheme(e.matches)
     })
 
     useEffect(() => {
-        if (theme) {
-            document.body.classList.add("dark")
-        } else {
-            document.body.classList.remove("dark")
-        }
+        const htmlClassList = document.getElementsByTagName("html")[0].classList
+        darkTheme ? htmlClassList.add("dark") : htmlClassList.remove("dark")
+        document.body.style.backgroundImage = `url(/assets/img/base_bg${darkTheme ? "" : "_light"}.jpg)`
+        document.getElementsByTagName("footer")[0].style.backgroundImage
+            = `url(/assets/img/footer_bg${darkTheme ? "" : "_light"}.png)`
     })
 
-    return <div className="inline-block">
-        {sun}{moon}
-    </div>
+    return <>
+        {darkTheme ? "Dark" : "Light"}
+        <button onClick={() => setDarkTheme(!darkTheme)}>[Change]</button>
+    </>
 }
