@@ -25,9 +25,13 @@ export default function ThemeSwitch() {
     useEffect(() => {
         const htmlClassList = document.getElementsByTagName("html")[0].classList
         darkTheme ? htmlClassList.add("dark") : htmlClassList.remove("dark")
+
         document.body.style.backgroundImage = `url(/assets/img/base_bg${darkTheme ? "" : "_light"}.jpg)`
+
         document.getElementsByTagName("footer")[0].style.backgroundImage
             = `url(/assets/img/footer_bg${darkTheme ? "" : "_light"}.png)`
+        
+        document.getElementById("header-logo")!.style.filter = darkTheme ? "invert(1)" : ""
     })
 
     return <>

@@ -1,4 +1,3 @@
-import { atom } from "nanostores";
 import Colors from "./Colors";
 import type { Valine, Gitalk, Waline } from "./types/CommentSystem";
 
@@ -85,6 +84,4 @@ export function defineEndfieldConfig(
     },
   };
 }
-
-export const isDarkMode = atom(true);
 
