@@ -1,24 +1,19 @@
----
-const site = Astro.site;
-const Bender = `url(${site}fonts/JovannyLemonad-Bender.otf)`;
-const Orbitron = `url(${site}fonts/Orbitron-VariableFont_wght.ttf)`;
-const JetBrainsMono = `url(${site}fonts/JetBrainsMono-Regular.woff2)`;
----
-
-<style is:global define:vars={{ Bender, Orbitron, JetBrainsMono }}>
+<style is:global>
   @font-face {
     font-family: "Bender";
-    src: local("Bender"), var(--Bender) format("oft");
+    src: local("Bender"), url("/fonts/JovannyLemonad-Bender.otf") format("oft");
   }
 
   @font-face {
     font-family: "Orbitron";
-    src: local("Orbitron"), var(--Orbitron) format("ttf");
+    src: local("Orbitron"),
+      url("/fonts/Orbitron-VariableFont_wght.ttf") format("ttf");
   }
 
   @font-face {
     font-family: "JetBrains Mono";
-    src: local("JetBrains Mono"), var(--JetBrainsMono) format("woff2");
+    src: local("JetBrains Mono"),
+      url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
   }
 
   code,
