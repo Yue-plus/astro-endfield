@@ -1,0 +1,23 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import { Debug } from "astro/components";
+
+import Layout from "../../layouts/Layout.astro";
+
+const blog = await getCollection("blog");
+---
+
+<Layout title="Blog">
+  <h1>Blog</h1>
+  <ul>
+    {
+      blog.map((d) => (
+        <li>
+          <a href={"/blog/" + d.slug}>{d.slug}</a>
+        </li>
+      ))
+    }
+  </ul>
+  <!-- <Debug {co} /> -->
+  <Debug {Astro.url} />
+</Layout>
