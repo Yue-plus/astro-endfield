@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
+import PostSlugPage from "@layouts/PostSlugPage.astro";
 import "@components/PostStyle.scss";
 
 export async function getStaticPaths() {
@@ -15,10 +15,6 @@ const { entry, title } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout title={title}>
-  <main>
-    <article>
-      <Content/>
-    </article>
-  </main>
-</Layout>
+<PostSlugPage title={title}>
+  <Content/>
+</PostSlugPage>

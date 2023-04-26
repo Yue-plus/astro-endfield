@@ -12,8 +12,11 @@
 
 [Bender Font Family](https://www.1001fonts.com/bender-font.html)
 | [Orbitron](https://fonts.google.com/specimen/Orbitron)
+| [Morro](https://freedafonts.com/morro-font/)
 | [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 | [思源黑体](https://github.com/adobe-fonts/source-han-sans/blob/master/README-CN.md)
+
+> [1433 Free Geometric Fonts · 1001 Fonts](https://www.1001fonts.com/geometric-fonts.html)
 
 ## 参考链接
 
