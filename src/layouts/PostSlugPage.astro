@@ -1,0 +1,11 @@
+---
+import Layout from "./Layout.astro";
+---
+
+<Layout title={Astro.props.title}>
+  <main>
+    <article class="text-fg-lightest bg-bg-lightest dark:text-fg-darkest dark:bg-bg-darkest opacity-80">
+      <slot/>
+    </article>
+  </main>
+</Layout>

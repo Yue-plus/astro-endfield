@@ -24,6 +24,7 @@
 - [《明日方舟：终末地》官方网站-Arknights: Endfield](https://endfield.hypergryph.com/)
 - [Arknights: Endfield - Over the Frontier | Into the Front](https://endfield.hypergryph.global/)
 - [《明日方舟：终末地》概念 CG](https://www.bilibili.com/video/BV1iF411s7vc/)
+- [生息演算玩法介绍 - 明日方舟的动态 - 哔哩哔哩](https://www.bilibili.com/opus/755407004356313202)
 
 ## 关联项目
 

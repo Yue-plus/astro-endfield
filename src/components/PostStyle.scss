@@ -1,0 +1,155 @@
+main article {
+  margin: .5rem;
+  padding: .5rem;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bolder;
+    font-family: "Bender", 微软雅黑, sans-serif;
+    margin: 1rem 0;
+    text-align: center;
+    display: flex;
+    overflow-y: clip;
+
+    &::before, &::after {
+      display: inline-block;
+      background-color: #fdfd1f;
+      opacity: .85;
+    }
+
+    &::before {
+      content: '';
+      margin: 0 1rem 0 -.5rem;
+    }
+
+    &::after {
+      flex: 1;
+      margin: 0 -.5rem 0 1rem;
+    }
+  }
+
+  h1 {
+    height: 2.3rem;
+    line-height: 2.3rem;
+    font-size: 2.2rem;
+
+    &::before {
+      width: .5rem;
+      height: 2.1rem;
+    }
+
+    &::after {
+      content: '';
+      height: 2.1rem;
+    }
+  }
+
+  h2 {
+    height: 2.2rem;
+    line-height: 2.2rem;
+    font-size: 2.1rem;
+
+    &::before {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+  }
+
+  h3 {
+    height: 2.1rem;
+    line-height: 2.1rem;
+    font-size: 2rem;
+
+    &::before {
+      width: .5rem;
+      height: 2.1rem;
+    }
+  }
+
+  h4 {
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.9rem;
+
+    &::before {
+      width: .5rem;
+      height: 2.1rem;
+    }
+  }
+
+  h5 {
+    height: 1.9rem;
+    line-height: 1.9rem;
+    font-size: 1.8rem;
+
+    &::before {
+      width: .5rem;
+      height: 2.1rem;
+    }
+  }
+
+  h6 {
+    height: 1.8rem;
+    line-height: 1.8rem;
+    font-size: 1.7rem;
+
+    &::before {
+      width: .5rem;
+      height: 2.1rem;
+    }
+  }
+
+  a {
+    color: #4e83ff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  table {
+    border: #fdfd1f 1px solid;
+
+    th {
+      color: black;
+      background: #fdfd1f;
+    }
+
+    td {
+      padding: .2rem .8rem;
+    }
+
+    td:hover {
+      background-color: rgba(#fdfd1f, .2);
+    }
+  }
+
+  //code {
+  //  padding: 0 .1rem;
+  //  background-color: rgba(black, .9);
+  //}
+
+  pre {
+    margin: 1rem 0;
+    padding: .5rem;
+    border: #fdfd1f solid 1px;
+
+    code {
+      counter-reset: step;
+      counter-increment: step 0;
+
+      //.line:hover {
+      //  background-color: rgba(#fdfd1f, .2);
+      //}
+
+      .line::before {
+        content: counter(step);
+        counter-increment: step;
+        width: 1rem;
+        margin-right: 1.5rem;
+        display: inline-block;
+        text-align: right;
+        color: rgba(115,138,148,.4)
+      }
+    }
+  }
+}
