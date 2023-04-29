@@ -6,5 +6,10 @@ import tailwind from "@astrojs/tailwind";
 // https://docs.astro.build/zh-cn/reference/configuration-reference/
 export default defineConfig({
   site: "https://astro.endfield.tech/",
+  markdown: {
+    shikiConfig: {
+      theme: "slack-dark"
+    },
+  },
   integrations: [react(), tailwind()],
 });

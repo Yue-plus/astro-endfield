@@ -3,21 +3,60 @@ import { getCollection, getEntryBySlug } from "astro:content";
 import { Debug } from "astro/components";
 
 import Layout from "@layouts/Layout.astro";
+import Card from "@components/Card.astro";
 
 const blog = await getCollection("blog");
 ---
 
 <Layout title="Blog">
-  <h1>Blog</h1>
-  <ul>
-    {
-      blog.map((d) => (
-        <li>
-          <a href={"/blog/" + d.slug}>{d.slug}</a>
-        </li>
-      ))
-    }
-  </ul>
-  <!-- <Debug {co} /> -->
-  <Debug {Astro.url} />
+  <!-- <h1 class="ml-3" style="font-family: 'Morro', sans-serif;">BLOG</h1> -->
+  {
+    blog.map(b => (
+      <a href={"/blog/" + b.slug}>
+        <object>
+          <Card title={"POSTED: " + b.data.date}>
+            <h1 class="text-4xl font-black">
+              {b.data.title}
+            </h1>
+            {b.body.split("<!-- more -->", 1)[0].split("<!--truncate-->", 1)[0]}
+          </Card>
+        </object>
+      </a>
+    ))
+  }
 </Layout>
+
+<style lang="scss">
+  h1 {
+    font-weight: bolder;
+    font-family: "Bender", 微软雅黑, sans-serif;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    color: #fff;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    font-size: 2.2rem;
+    text-shadow: 0 0 2rem #000, 0 0 1rem #000, 0 0 .3rem #000;
+
+    &::before, &::after {
+      display: inline-block;
+      background-color: #fdfd1f;
+      opacity: .85;
+    }
+
+    &::before {
+      width: .5rem;
+      height: 2.1rem;
+      content: '';
+      margin: 0 1rem 0 -.5rem;
+    }
+
+    &::after {
+      // content: '';
+      height: 2.1rem;
+      flex: 1;
+      margin: 0 -.5rem 0 1rem;
+    }
+  }
+</style>

@@ -8,7 +8,7 @@ main article {
     margin: 1rem 0;
     text-align: center;
     display: flex;
-    overflow-y: clip;
+    // overflow-y: clip;
 
     &::before, &::after {
       display: inline-block;
@@ -28,9 +28,11 @@ main article {
   }
 
   h1 {
+    color: #fff;
     height: 2.3rem;
     line-height: 2.3rem;
     font-size: 2.2rem;
+    text-shadow: 0 0 2rem #000, 0 0 1rem #000, 0 0 .3rem #000;
 
     &::before {
       width: .5rem;
@@ -103,6 +105,10 @@ main article {
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &::after {
+      content: "↗";
     }
   }
 
