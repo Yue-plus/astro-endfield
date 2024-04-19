@@ -82,7 +82,7 @@ const SLOGAN = "Astro powers the world's fastest websites, client-side web apps,
     /** 处于横屏模式时 */
     @media screen and (orientation: landscape) {
         #block-texture {
-            width: 90vw;
+            width: 85vw;
             height: 23vh;
             background-image: url("/assets/block_texture.jpg");
             margin-top: 25vh;
@@ -98,7 +98,7 @@ const SLOGAN = "Astro powers the world's fastest websites, client-side web apps,
         }
 
         #endfield-pattern, #arknights-prefix-pattern {
-            left: 40vh;
+            left: 35vh;
         }
 
         #endfield-pattern {
@@ -109,6 +109,19 @@ const SLOGAN = "Astro powers the world's fastest websites, client-side web apps,
 
         #slogan {
             width: 38vw;
+        }
+    }
+
+    /** 超大屏特例 */
+    @media screen and (width >= 3000px) and (height >= 1800px) {
+        #arknights-prefix-pattern {
+            height: 22px;
+        }
+
+        #endfield-pattern {
+            width: unset;
+            max-width: unset;
+            height: 12vh;
         }
     }
 </style>
