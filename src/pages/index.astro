@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeroButton from '../components/HeroButton.astro';
 
 const SLOGAN = "Astro powers the world's fastest websites, client-side web apps, dynamic API endpoints, and everything in-between."
 ---
@@ -11,6 +12,9 @@ const SLOGAN = "Astro powers the world's fastest websites, client-side web apps,
         <img id="endfield-pattern" src="/assets/endfield_pattern.png" alt="ENDFIELD"/>
     </div>
     <div id="slogan">{SLOGAN}</div>
+    <div style="text-align: center; padding: 2.5vh 0; box-sizing: border-box">
+        <HeroButton>Get Started</HeroButton>
+    </div>
 </Layout>
 
 <style>
@@ -29,6 +33,7 @@ const SLOGAN = "Astro powers the world's fastest websites, client-side web apps,
     #block-texture,
     #block-texture img {
         user-select: none;
+        pointer-events: none;
     }
 
     #arknights-prefix-pattern {

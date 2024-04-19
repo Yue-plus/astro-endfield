@@ -1,0 +1,30 @@
+<button><slot /></button>
+
+<style>
+    button {
+        height: 5vmax;
+        color: #4b4b4d;
+        background-color: #fdfd1f;
+        border: 2px solid rgba(33, 33, 33, .3);
+        border-radius: 100vmax;
+        box-shadow: 0 0 0 4px rgba(45, 45, 45, .15);
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2vmax;
+        font-weight: 700;
+        user-select: none;
+    }
+
+    button::after, button::before {
+        width: .5vmax;
+        height: .5vmax;
+        background-color: #212121;
+        content: "";
+        margin: 0 3vw;
+        display: inline-block;
+        opacity: .3;
+        transform: translateY(-50%);
+    }
+</style>
