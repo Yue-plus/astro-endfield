@@ -1,0 +1,21 @@
+---
+import {getCollection, getEntryBySlug} from "astro:content";
+import {Debug} from "astro/components";
+
+import BlockTextureLayout from "../../layouts/BlockTextureLayout.astro";
+
+const docs = await getCollection("blog");
+---
+
+<BlockTextureLayout title="Blog" info="Blog">
+    <h1>Blog</h1>
+    <ul>
+        {
+            docs.map((d) => (
+                    <li>
+                        <a href={"/blog/" + d.slug}>{d.slug}</a>
+                    </li>
+            ))
+        }
+    </ul>
+</BlockTextureLayout>

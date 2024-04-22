@@ -13,7 +13,9 @@ const SLOGAN = "Astro powers the world's fastest websites, client-side web apps,
     </div>
     <div id="slogan">{SLOGAN}</div>
     <div style="text-align: center; padding: 2.5vh 0; box-sizing: border-box">
-        <HeroButton>Get Started</HeroButton>
+        <HeroButton onClick="window.location.href = '//' + window.location.host + '/docs/get-started/';">
+            Get Started
+        </HeroButton>
     </div>
 </Layout>
 
