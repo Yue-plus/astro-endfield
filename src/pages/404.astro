@@ -3,7 +3,7 @@ import BlockTextureLayout from "../layouts/BlockTextureLayout.astro";
 import HeroButton from "../components/HeroButton.astro";
 ---
 
-<BlockTextureLayout isPrimary title="404 - NOT FOUND" info="HTTP ERROR">
+<BlockTextureLayout title="404 - NOT FOUND" info="HTTP ERROR">
     <div id="flex">
         <HeroButton class="button" onClick="window.location.href='//' + window.location.host;">Back Home</HeroButton>
         <div style="width: 5vmax; height: 5vmax;"></div>
@@ -20,7 +20,6 @@ import HeroButton from "../components/HeroButton.astro";
     @media screen and (orientation: portrait) {
         #flex {
             flex-direction: column;
-            box-sizing: border-box;
             margin: 0 25vw;
         }
     }
