@@ -1,0 +1,76 @@
+---
+import Layout from "./Layout.astro";
+
+const title = Astro.props.title ?? "NO TITLE"
+const info = Astro.props.info ?? "NO INFO"
+const headerBackgroundStyle = `background-image: url(${
+    Astro.props.isPrimary ? "/assets/block_texture.jpg" : "/assets/block_texture_white.jpg"
+});`
+---
+
+<Layout title={title}>
+    <header style={headerBackgroundStyle}>
+        <img src="/assets/endfield_pattern.png" alt="ENDFIELD"/>
+        <h1>{title ?? "NO TITLE"}</h1>
+        <div></div>
+        <div id="doc-type">{info}</div>
+    </header>
+    <main>
+        <slot />
+    </main>
+</Layout>
+
+<style>
+    header {
+        //height: 45vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    header::before {
+        width: 55vw;
+        height: 1vh;
+        content: "";
+        display: block;
+        background-color: #fdfd1f;
+        position: absolute;
+        left: 5vw;
+        bottom: -0.75vh;
+    }
+
+    #doc-type {
+        color: white;
+        background-color: #383838;
+        font-size: 1.5vh;
+        padding: .1vh .5vw;
+        position: absolute;
+        left: 60vw;
+        bottom: -0.75vh;
+        user-select: none;
+    }
+
+    h1 {
+        color: #383838;
+        margin: 0;
+        padding: 4vh 0;
+        vertical-align: center;
+        font-size: 12vmin;
+        text-align: center;
+    }
+
+    img {
+        width: 80vw;
+        margin: -3vh 0 0 5vw;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    main {
+        width: 100vw;
+        position: fixed;
+        top: 70vh;
+        text-align: center;
+    }
+</style>

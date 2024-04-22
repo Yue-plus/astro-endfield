@@ -1,4 +1,10 @@
-<button><slot /></button>
+---
+const onClick = Astro.props.onClick
+---
+
+<button onclick={onClick}>
+    <slot />
+</button>
 
 <style>
     button {
