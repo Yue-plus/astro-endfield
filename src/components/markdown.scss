@@ -1,0 +1,52 @@
+// 作用于文档与博客正文的 Markdown 内容的样式
+
+article {
+  font-size: 2.5vmin;
+
+  h1 {
+    border-left: .8vmin solid #ffff21;
+    padding-left: 1.8vmin;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  code {
+    padding: 0 1vmax;
+    background-color: rgba(#000, .03);
+  }
+
+  pre {
+    padding: 1vmax;
+    box-sizing: border-box;
+    background-color: rgba(#000, .03) !important;
+
+    code {
+      padding: 0;
+      background-color: unset;
+    }
+  }
+
+  blockquote {
+    margin: 3vh 0;
+    box-sizing: border-box;
+    border-left: .8vmin solid #ffff21;
+    padding: 2vmin;
+    background-color: rgba(#000, .03);
+  }
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+
+    thead {
+      color: white;
+      background-color: black;
+    }
+
+    td:hover {
+      background-color: rgba(#ffff21, .1);
+    }
+  }
+}
