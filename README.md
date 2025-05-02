@@ -1,4 +1,4 @@
-# 欢迎回归 [AstroEndfield](https://astro.endfield.tech/)
+# 欢迎回归 [AstroEndfield](https://astro.endfield.icu/)
 
 ![](./public/assets/img/astro-endfield-logo.svg)
 

@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 // https://docs.astro.build/zh-cn/reference/configuration-reference/
 export default defineConfig({
-  site: "https://astro.endfield.tech/",
+  site: "https://astro.endfield.icu/",
   markdown: {
     shikiConfig: {
       theme: "slack-dark"
