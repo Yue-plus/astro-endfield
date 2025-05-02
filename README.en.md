@@ -1,4 +1,4 @@
-# Welcome back [AstroEndfield](https://astro.endfield.tech/)
+# Welcome back [AstroEndfield](https://astro.endfield.icu/)
 
 [简体中文](./README.md)
 | [日本語（TODO）](./README.ja.md)
